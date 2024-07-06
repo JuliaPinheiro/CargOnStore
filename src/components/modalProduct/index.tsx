@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import {
   Modal,
   Box,
-  Typography,
   IconButton,
   Button,
   FormControl,
   FormGroup,
   FormControlLabel,
   Checkbox,
+  Typography,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -132,9 +132,6 @@ const ModalProduct: React.FC<ModalProductProps> = ({
         >
           Adicionar ao Carrinho
         </Button>
-        <Typography variant='h6' sx={{ mt: 2 }}>
-          R${productDetails.price.toFixed(2)}
-        </Typography>
       </Box>
     </Modal>
   );
