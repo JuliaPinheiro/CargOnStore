@@ -1,5 +1,6 @@
-[
+  [
   {
+    "id": 1,
     "name": "Camiseta do Brasil",
     "image_url": "https://imgnike-a.akamaihd.net/1300x1300/0228340L.jpg",
     "type": "Camiseta",
@@ -10,6 +11,7 @@
     "sport": "Futebol"
   },
   {
+    "id": 2,
     "name": "Regata do Chicago Bulls",
     "image_url": "https://static.lojanba.com/produtos/camiseta-regata-nba-adidas-swingman-chicago-bulls-rose/68/D13-0209-068/D13-0209-068_zoom1.jpg?ts=1600856952",
     "type": "Regata",
@@ -20,6 +22,7 @@
     "sport": "Basquete"
   },
   {
+    "id": 3,
     "name": "Calção da Puma",
     "image_url": "https://static.netshoes.com.br/produtos/calcao-puma-liga-core-masculino/56/NWG-1619-056/NWG-1619-056_zoom1.jpg?ts=1643646713&",
     "type": "Calção",
@@ -30,6 +33,7 @@
     "sport": "Corrida"
   },
   {
+    "id": 4,
     "name": "Calção da Nike",
     "image_url": "https://static.netshoes.com.br/produtos/calcao-nike-dri-fit-academy-masculino/26/HZM-0829-326/HZM-0829-326_zoom1.jpg?ts=1660657811",
     "type": "Calção",
@@ -40,6 +44,7 @@
     "sport": "Corrida"
   },
   {
+    "id": 5,
     "name": "Meia da Jordan",
     "image_url": "https://artwalk.vteximg.com.br/arquivos/ids/193193-1000-1000/Meia-Nike-Jordan-Jumpman-Masculina.jpg?v=636210228372600000",
     "type": "Acessório",
@@ -50,3 +55,4 @@
     "sport": "Basquete"
   }
 ]
+ 

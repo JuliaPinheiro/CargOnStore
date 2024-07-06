@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Box,
-  IconButton,
-} from '@mui/material';
-import FilterListIcon from '@mui/icons-material/FilterList';
+import { AppBar, Toolbar, Button, Box, IconButton } from '@mui/material';
 
 const Navbar: React.FC = () => {
   const [menuItems] = useState([
-    { id: 1, label: 'CargOn Promo' },
+    { id: 1, label: 'Home' },
     { id: 2, label: 'Produtos' },
     { id: 3, label: 'Masculino' },
     { id: 4, label: 'Feminino' },
@@ -22,36 +14,37 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar>
+    <AppBar position='static' sx={{ backgroundColor: '#fff', color: '#000' }}>
       <Toolbar>
-        <Typography
-          variant='h6'
-          noWrap
-          component='div'
-          sx={{
-            flexGrow: 0.4,
-            display: { xs: 'none', sm: 'block' },
-          }}
-        >
-          CargOn Store
-        </Typography>
-        <Box
-          sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}
-        >
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+          {' '}
           {menuItems.map((item) => (
-            <Button key={item.id} color='inherit'>
+            <Button
+              key={item.id}
+              sx={{
+                color: '#000',
+                marginRight: 2,
+                '&:hover': {
+                  textDecoration: 'underline',
+                  textDecorationThickness: '2px',
+                  textUnderlineOffset: '3px',
+                },
+              }}
+            >
               {item.label}
             </Button>
           ))}
         </Box>
-
-        <IconButton
-          color='inherit'
-          aria-label='open filter'
-          onClick={handleFilterClick}
-        >
-          <FilterListIcon />
-        </IconButton>
+        <Box sx={{ flexGrow: 0 }}>
+          {' '}
+          <IconButton
+            size='large'
+            edge='end'
+            color='inherit'
+            aria-label='filter'
+            onClick={handleFilterClick}
+          ></IconButton>
+        </Box>
       </Toolbar>
     </AppBar>
   );
