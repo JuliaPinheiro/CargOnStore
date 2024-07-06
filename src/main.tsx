@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import { ThemeProvider } from '@mui/material';
-import theme from './themes/theme.ts';
+import theme from './themes/theme';
 
 const rootContainer = document.getElementById('root') as HTMLElement;
 
