@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 
 import VideoSection from './components/videoSection';
 import Carousel from './components/carousel';
+import CarouselProduct from './components/productCard';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       </Box>
       <Box mt={'0.5rem'} mb={''}>
         <VideoSection />
+      </Box>
+      <Box mt={'3rem'}>
+        <CarouselProduct />
       </Box>
     </Box>
   );
