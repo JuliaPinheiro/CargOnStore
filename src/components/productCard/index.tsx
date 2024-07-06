@@ -1,13 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { IconButton, Typography, Box } from '@mui/material';
+import {
+  IconButton,
+  Typography,
+  Box,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import productsData from '../../../public/data.json';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const productsToShow = 4;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const productsToShow = isMobile ? 1 : 4;
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -19,10 +26,9 @@ const Carousel = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + productsToShow < productsData.length
         ? prevIndex + productsToShow
-        : prevIndex
+        : 0
     );
   };
-
   const visibleProducts = productsData.slice(
     currentIndex,
     currentIndex + productsToShow
@@ -44,18 +50,17 @@ const Carousel = () => {
         <Box
           key={product.id}
           sx={{
-            width: 200,
-            height: 240,
+            width: isMobile ? 300 : 200,
+            height: isMobile ? 280 : 240,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-
             padding: 2,
             margin: '0 10px',
             transition: 'transform 0.3s ease-in-out',
             '&:hover': {
-              transform: 'scale(1.10)',
+              transform: isMobile ? 'scale(1)' : 'scale(1.10)',
               textDecoration: 'none',
             },
           }}

@@ -1,5 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Box, IconButton, Typography } from '@mui/material';
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import React, { useState, useEffect } from 'react';
@@ -12,6 +17,9 @@ const Carousel = () => {
     'Aproveite o novo lançamento de tênis de corrida!',
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const nextPhrase = () => {
     setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
@@ -31,15 +39,29 @@ const Carousel = () => {
 
   return (
     <Box
-      sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: isMobile ? 'column' : 'row',
+      }}
     >
-      <IconButton onClick={prevPhrase} aria-label='anterior'>
-        <ArrowBackIosIcon />
-      </IconButton>
-      <Typography>{phrases[currentPhraseIndex]}</Typography>
-      <IconButton onClick={nextPhrase} aria-label='próxima'>
-        <ArrowForwardIosIcon />
-      </IconButton>
+      {!isMobile && (
+        <IconButton onClick={prevPhrase} aria-label='anterior' size='medium'>
+          <ArrowBackIosIcon fontSize='medium' />
+        </IconButton>
+      )}
+      <Typography
+        variant={isMobile ? 'body2' : 'h6'}
+        sx={{ padding: isMobile ? 1 : 2 }}
+      >
+        {phrases[currentPhraseIndex]}
+      </Typography>
+      {!isMobile && (
+        <IconButton onClick={nextPhrase} aria-label='próxima' size='medium'>
+          <ArrowForwardIosIcon fontSize='medium' />
+        </IconButton>
+      )}
     </Box>
   );
 };
