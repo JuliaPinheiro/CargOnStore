@@ -1,4 +1,4 @@
-  [
+[
   {
     "id": 1,
     "name": "Camiseta do Brasil",
@@ -7,7 +7,7 @@
     "price": 349.99,
     "seller": "Nike",
     "available_sizes": ["P", "M", "G", "GG"],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "details": "Camiseta oficial da seleção brasileira de futebol, perfeita para torcer pelo Brasil em grande estilo. Feita com material de alta qualidade que proporciona conforto e durabilidade.",
     "sport": "Futebol"
   },
   {
@@ -18,7 +18,7 @@
     "price": 499.99,
     "seller": "Adidas",
     "available_sizes": ["P", "M", "G", "XPP"],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "details": "Regata oficial do Chicago Bulls, ideal para os fãs do time e do basquete. Confeccionada em tecido leve e respirável, garantindo conforto durante os jogos ou treinos.",
     "sport": "Basquete"
   },
   {
@@ -29,7 +29,7 @@
     "price": 99.69,
     "seller": "Puma",
     "available_sizes": ["P", "M", "G"],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "details": "Calção da Puma ideal para corridas e atividades físicas. Fabricado com material leve e confortável, que facilita a movimentação e a ventilação.",
     "sport": "Corrida"
   },
   {
@@ -40,7 +40,7 @@
     "price": 109.69,
     "seller": "Nike",
     "available_sizes": [],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "details": "Calção da Nike Dri-Fit, perfeito para corridas e treinamentos intensos. Feito com tecido que absorve o suor, mantendo a pele seca e confortável.",
     "sport": "Corrida"
   },
   {
@@ -51,8 +51,7 @@
     "price": 119.69,
     "seller": "Jordan",
     "available_sizes": ["44", "39"],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "details": "Meia da Jordan com design icônico, ideal para jogadores de basquete. Confortável e resistente, proporciona um ótimo ajuste e suporte durante as partidas.",
     "sport": "Basquete"
   }
 ]
- 

@@ -5,10 +5,12 @@ import {
   Box,
   useTheme,
   useMediaQuery,
+  Button,
 } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import productsData from '../../../public/data.json';
+import ModalProduct from '../modalProduct';
 
 const Product = ({
   product,
@@ -16,44 +18,70 @@ const Product = ({
 }: {
   product: any;
   isMobile: boolean;
-}) => (
-  <Box
-    role='button'
-    key={product.id}
-    sx={{
-      width: isMobile ? 300 : 200,
-      height: isMobile ? 280 : 240,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 2,
-      margin: '0 10px',
-      transition: 'transform 0.3s ease-in-out',
-      '&:hover': {
-        transform: isMobile ? 'scale(1)' : 'scale(1.10)',
-        textDecoration: 'none',
-      },
-      cursor: 'pointer',
-    }}
-  >
-    <img
-      src={product.image_url}
-      alt={product.name}
-      style={{
-        width: '100%',
-        height: 'auto',
-        maxHeight: 128,
-        objectFit: 'contain',
-      }}
-    />
-    <Typography variant='body2'>{product.name}</Typography>
-    <Typography variant='body2' color='text.secondary'>
-      R$ {product.price}
-    </Typography>
-  </Box>
-);
+}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  return (
+    <Box
+      role='button'
+      key={product.id}
+      sx={{
+        width: isMobile ? 300 : 200,
+        height: isMobile ? 280 : 240,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 2,
+        margin: '0 10px',
+        transition: 'transform 0.3s ease-in-out',
+        '&:hover': {
+          transform: isMobile ? 'scale(1)' : 'scale(1.10)',
+          textDecoration: 'none',
+        },
+        cursor: 'pointer',
+      }}
+    >
+      <img
+        src={product.image_url}
+        alt={product.name}
+        style={{
+          width: '100%',
+          height: 'auto',
+          maxHeight: 128,
+          objectFit: 'contain',
+        }}
+      />
+      <Typography variant='body2'>{product.name}</Typography>
+      <Typography variant='body2' color='text.secondary'>
+        R$ {product.price}
+      </Typography>
+      <Button
+        variant='contained'
+        sx={{
+          marginTop: 1,
+          backgroundColor: 'black',
+          color: 'white',
+          borderRadius: '20px',
+          '&:hover': {
+            backgroundColor: 'darkgrey',
+          },
+        }}
+        onClick={handleOpenModal}
+      >
+        Comprar
+      </Button>
+      <ModalProduct
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        productDetails={product}
+      />
+    </Box>
+  );
+};
 const CarouselProduct = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();
