@@ -10,9 +10,9 @@ function App() {
     <Box>
       <Navbar />
       <Carousel />
-      <Box id='VideoSection' />
+      <Box id='video-section' />
       <VideoSection />
-      <Box id='CarouselProduct' />
+      <Box id='carousel-product' />
       <CarouselProduct />
     </Box>
   );

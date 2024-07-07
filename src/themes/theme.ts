@@ -21,7 +21,16 @@ let theme = createTheme({
     },
   },
 
-  spacing: 8,  
+  spacing: 8,
+
+  typography: {
+    fontFamily: [
+      '"Roboto"',
+      '"Helvetica"',
+      '"Arial"',
+      'sans-serif',
+    ].join(','),
+  },
 });
 
 theme = responsiveFontSizes(theme);

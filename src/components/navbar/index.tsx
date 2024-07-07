@@ -49,7 +49,6 @@ const Navbar = () => {
       onClick: () => scrollToSection('carousel-product'),
     },
   ];
-
   return (
     <>
       <AppBar
