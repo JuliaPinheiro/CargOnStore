@@ -11,6 +11,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import productsData from '../../../public/data.json';
 import ModalProduct from '../modalProduct';
+import { formatPrice } from '../../helpers/format';
 
 const Product = ({
   product,
@@ -57,7 +58,7 @@ const Product = ({
       />
       <Typography variant='body2'>{product.name}</Typography>
       <Typography variant='body2' color='text.secondary'>
-        R$ {product.price}
+        {formatPrice(product.price)}
       </Typography>
       <Button
         variant='contained'
