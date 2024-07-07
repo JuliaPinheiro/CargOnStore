@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Typography, Box, Button, Grid } from '@mui/material';
 import productsData from '../../../public/dataProductList.json';
 import ModalProduct from '../modalProduct';
-import { formatPrice } from '../../helpers/format';
 import ProductFilter from '../filters/ProductFilter';
+import { formatPrice } from '../../helpers/format';
 
 const Product = ({ product }: { product: any }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, useModal] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleOpenModal = () => useModal(true);
+  const handleCloseModal = () => useModal(false);
 
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -78,6 +78,10 @@ const ProductsList = () => {
     );
   };
 
+  const removeType = (type: string) => {
+    setSelectedTypes((prev) => prev.filter((t) => t !== type));
+  };
+
   const filteredProducts = productsData.filter((product) =>
     selectedTypes.length > 0 ? selectedTypes.includes(product.type) : true
   );
@@ -92,6 +96,7 @@ const ProductsList = () => {
         selectedTypes={selectedTypes}
         handleTypeChange={handleTypeChange}
         uniqueTypes={uniqueTypes}
+        removeType={removeType}
       />
       <Grid container spacing={2}>
         {filteredProducts.map((product) => (
