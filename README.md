@@ -1,8 +1,36 @@
-# React + Vite
+# Projeto de Teste para Vaga de Engenheiro de Software JR - CargOn
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Engenheiro de Software Jr na CargOn. O objetivo era criar um marketplace de roupas utilizando React.js.
 
-Currently, two official plugins are available:
+## Funcionalidades Implementadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Listagem de Produtos:** Os produtos são exibidos em formato de marketplace, mostrando nome, preço e imagem de cada item.
+- **Detalhes do Produto em Modal:** Ao clicar em um produto, um modal é exibido com detalhes adicionais sobre o produto selecionado.
+- **Navbar:** Implementação de uma navbar com opções de navegação para diferentes páginas.
+- **Filtro por Categoria:** Implementação de um filtro para categorias de produtos, permitindo ao usuário filtrar os produtos exibidos.
+
+## Tecnologias Utilizadas
+
+- **React.js** 
+- **Material-UI** 
+- **React Router** 
+- **Vite** 
+
+## Como Rodar o Projeto
+
+Para rodar este projeto localmente, siga os passos abaixo utilizando o bash (linha de comando):
+
+1. **Clone o repositório:**
+   ```bash
+   git clone git@github.com:JuliaPinheiro/CargOnStore.git
+    ```
+
+2. **Instale as dependências do projeto:**
+   ```bash
+   npm install
+    ```
+3. **Inicie o servidor de desenvolvimento:**
+
+   ```bash
+   npm run dev
+    ```
