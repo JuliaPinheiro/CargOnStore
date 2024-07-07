@@ -1,9 +1,8 @@
-// Router.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from '../pages/homePage';
 import NotFoundPage from '../pages/NotFoundPage';
 import ProductListPage from '../pages/ProductListPage';
+import HomePage from '../pages/HomePage';
 
 const AppRouter = () => {
   return (
