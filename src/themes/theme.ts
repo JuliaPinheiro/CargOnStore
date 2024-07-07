@@ -9,6 +9,10 @@ let theme = createTheme({
     primary: {
       main: '#212121',
     },
+    text: {
+      primary: '#212121',
+      secondary: '#4caf50',
+    },
   },
 
   breakpoints: {
