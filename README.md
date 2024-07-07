@@ -14,7 +14,13 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Eng
 - **React.js** 
 - **Material-UI** 
 - **React Router** 
-- **Vite** 
+- **Vite**
+
+## Prévia do site
+
+   ```bash
+https://main--cargonstoredejulia.netlify.app/
+ ```
 
 ## Como Rodar o Projeto
 
