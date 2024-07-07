@@ -82,6 +82,7 @@ const Product = ({
     </Box>
   );
 };
+
 const CarouselProduct = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();

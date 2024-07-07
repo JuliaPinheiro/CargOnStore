@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Tênis Nike Air Max 270",
+    "image_url": "https://imgnike-a.akamaihd.net/1920x1920/011224ID.jpg",
+    "type": "Tênis",
+    "price": 649.99,
+    "seller": "Nike",
+    "available_sizes": ["38", "39", "40", "41", "42", "43", "44"],
+    "details": "Tênis Nike Air Max 270, conhecido pelo seu conforto e estilo inconfundível. Perfeito para o dia a dia e prática esportiva.",
+    "sport": "Running"
+  },
+  {
+    "id": 2,
+    "name": "Bola de Futebol Nike Copa Mundial",
+    "image_url": "https://imgnike-a.akamaihd.net/1920x1920/02790151.jpg",
+    "type": "Bola",
+    "price": 249.99,
+    "seller": "Nike",
+    "available_sizes": ["Único"],
+    "details": "Bola oficial da Copa do Mundo FIFA, usada por jogadores profissionais. Fabricada com materiais de alta qualidade para melhor performance.",
+    "sport": "Futebol"
+  },
+  {
+    "id": 3,
+    "name": "Camisa de Ciclismo Oakley",
+    "image_url": "https://d1zvfmhlebc91g.cloudfront.net/fit-in/1600x900/filters:fill(ffffff)/filters:background_color(ffffff)/filters:quality(80)/n49shopv2_tudobike/images/products/633ed2ea469ca/1-633ed2ea46ac7.jpg",
+    "type": "Camisa",
+    "price": 189.99,
+    "seller": "Oakley",
+    "available_sizes": ["P", "M", "G", "GG"],
+    "details": "Camisa de ciclismo Oakley, feita com tecidos que absorvem a umidade e proporcionam conforto durante longos passeios de bicicleta.",
+    "sport": "Ciclismo"
+  },
+  {
+    "id": 4,
+    "name": "Bola de Basquete Spalding NBA",
+    "image_url": "https://imgcentauro-a.akamaihd.net/1366x1366/9664513L.jpg",
+    "type": "Bola",
+    "price": 349.99,
+    "seller": "Spalding",
+    "available_sizes": ["7"],
+    "details": "Bola oficial da NBA, usada em jogos profissionais. Feita com couro premium para melhor controle e durabilidade.",
+    "sport": "Basquete"
+  },
+  {
+    "id": 5,
+    "name": "Luvas de Boxe Everlast Pro Style",
+    "image_url": "https://a-static.mlcdn.com.br/450x450/luva-de-boxe-everlast-pro-style-preta/stadiumsports/bd41b0d4e34111eb84434201ac18500e/18b40a88f044606eb03d2a73993af0ac.jpeg",
+    "type": "Luvas",
+    "price": 299.99,
+    "seller": "Everlast",
+    "available_sizes": ["10 oz", "12 oz", "14 oz", "16 oz"],
+    "details": "Luvas de boxe profissionais Everlast Pro Style, ideais para treinos e competições. Oferecem proteção e conforto ao atleta.",
+    "sport": "Boxe"
+  },
+  {
+    "id": 6,
+    "name": "Raquete de Tênis Wilson Pro Staff",
+    "image_url": "https://static.prospin.com.br/media/catalog/product/cache/6e59e4946046b080cb91aa3230980e44/w/r/wr125711-raquete-de-tenis-wilson-pro-staff-97-v14.jpg",
+    "type": "Raquete",
+    "price": 899.99,
+    "seller": "Wilson",
+    "available_sizes": ["Único"],
+    "details": "Raquete de tênis Wilson Pro Staff, usada por jogadores profissionais. Feita com materiais de alta qualidade para melhor performance.",
+    "sport": "Tênis"
+  },
+  {
+    "id": 7,
+    "name": "Bermuda de Natação Speedo",
+    "image_url": "https://static.netshoes.com.br/produtos/bermuda-natacao-speedo-xtra-marinho/42/I46-6562-342/I46-6562-342_zoom1.jpg?ts=1694715730?ims=400x",
+    "type": "Bermuda",
+    "price": 149.99,
+    "seller": "Speedo",
+    "available_sizes": ["P", "M", "G", "GG"],
+    "details": "Bermuda de natação Speedo, ideal para treinos e competições. Fabricada com tecido resistente ao cloro e confortável.",
+    "sport": "Natação"
+  },
+  {
+    "id": 8,
+    "name": "Chuteira Adidas Predator Freak.1",
+    "image_url": "https://imgcentauro-a.akamaihd.net/768x768/98702502.jpg",
+    "type": "Chuteira",
+    "price": 799.99,
+    "seller": "Adidas",
+    "available_sizes": ["39", "40", "41", "42", "43", "44"],
+    "details": "Chuteira Adidas Predator Freak.1, projetada para controle máximo da bola. Ideal para jogadores que buscam precisão e potência.",
+    "sport": "Futebol"
+  },
+  {
+    "id": 9,
+    "name": "Caneleira Nike Mercurial Lite",
+    "image_url": "https://imgcentauro-a.akamaihd.net/360x360/97729802.jpg",
+    "type": "Caneleira",
+    "price": 149.99,
+    "seller": "Nike",
+    "available_sizes": ["P", "M", "G"],
+    "details": "Caneleira Nike Mercurial Lite, leve e resistente. Proporciona proteção contra impactos durante os jogos de futebol.",
+    "sport": "Futebol"
+  },
+  {
+    "id": 10,
+    "name": "Camiseta Under Armour Tech",
+    "image_url": "https://imgcentauro-a.akamaihd.net/1300x1300/94807802.jpg",
+    "type": "Camiseta",
+    "price": 79.99,
+    "seller": "Under Armour",
+    "available_sizes": ["P", "M", "G", "GG"],
+    "details": "Camiseta Under Armour Tech, feita com material que absorve o suor e seca rapidamente. Ideal para treinos e atividades esportivas.",
+    "sport": "Fitness"
+  }
+]

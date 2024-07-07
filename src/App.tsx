@@ -2,8 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import VideoSection from './components/videoSection';
 import Carousel from './components/carousel';
-import CarouselProduct from './components/productCard';
+
 import Navbar from './components/navbar';
+import CarouselProduct from './components/productCard/CarouselProduct';
+import ProductsList from './components/productCard/ProductsList';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <VideoSection />
       <Box id='carousel-product' />
       <CarouselProduct />
+      <Box id='products-list' />
+      <ProductsList />
     </Box>
   );
 }
