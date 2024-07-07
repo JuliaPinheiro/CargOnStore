@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -13,11 +13,13 @@ import {
   Box,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const location = useLocation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -37,18 +39,31 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: 'Home', anchor: '#', onClick: scrollToTop },
+    { label: 'Home', anchor: '/', onClick: scrollToTop },
     {
       label: 'Lançamento',
-      anchor: '#VideoSection',
-      onClick: () => scrollToSection('video-section'),
+      anchor: '/#video-section',
+      onClick: () => {},
     },
     {
       label: 'Promoção',
-      anchor: '#CarouselProduct',
-      onClick: () => scrollToSection('carousel-product'),
+      anchor: '/#carousel-product',
+      onClick: () => {},
+    },
+    {
+      label: 'Produtos',
+      anchor: '/products',
+      onClick: () => {},
     },
   ];
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      scrollToSection(id);
+    }
+  }, [location]);
+
   return (
     <>
       <AppBar
@@ -74,36 +89,40 @@ const Navbar = () => {
               >
                 <List>
                   {navItems.map((item) => (
-                    <ListItem
-                      button
+                    <Link
                       key={item.label}
-                      component='a'
-                      href={item.anchor}
-                      onClick={item.onClick}
+                      to={item.anchor}
+                      style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                      <ListItemText primary={item.label} />
-                    </ListItem>
+                      <ListItem button onClick={item.onClick}>
+                        <ListItemText primary={item.label} />
+                      </ListItem>
+                    </Link>
                   ))}
                 </List>
               </Drawer>
             </>
           ) : (
             navItems.map((item) => (
-              <Button
+              <Link
                 key={item.label}
-                href={item.anchor}
-                onClick={item.onClick}
-                sx={{
-                  color: 'black',
-                  '&:hover': {
-                    textDecoration: 'underline',
-                    fontWeight: 'bold',
-                  },
-                  fontFamily: theme.typography.fontFamily,
-                }}
+                to={item.anchor}
+                style={{ textDecoration: 'none', color: 'inherit' }}
               >
-                {item.label}
-              </Button>
+                <Button
+                  onClick={item.onClick}
+                  sx={{
+                    color: 'black',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      fontWeight: 'bold',
+                    },
+                    fontFamily: theme.typography.fontFamily,
+                  }}
+                >
+                  {item.label}
+                </Button>
+              </Link>
             ))
           )}
         </Toolbar>
