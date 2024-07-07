@@ -11,11 +11,12 @@ import React, { useState, useEffect } from 'react';
 
 const Carousel = () => {
   const phrases = [
-    'NIKE PROMO começou! aproveite ofertas imperdíveis',
-    'Novo Pegasus 41 não desperdice sua energia!',
+    'NIKE PROMO começou! Aproveite ofertas imperdíveis.',
+    'Novo Pegasus 41: não desperdice sua energia!',
     'Fique em forma com o novo Air Max 2024!',
     'Aproveite o novo lançamento de tênis de corrida!',
   ];
+
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
   const theme = useTheme();

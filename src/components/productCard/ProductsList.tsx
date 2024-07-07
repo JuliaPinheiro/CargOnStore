@@ -96,7 +96,6 @@ const ProductsList = () => {
         selectedTypes={selectedTypes}
         handleTypeChange={handleTypeChange}
         uniqueTypes={uniqueTypes}
-        removeType={removeType}
       />
       <Grid container spacing={2}>
         {filteredProducts.map((product) => (
