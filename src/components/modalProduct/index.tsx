@@ -128,7 +128,7 @@ const ModalProduct: React.FC<ModalProductProps> = ({
           onClick={handleAddToCart}
           startIcon={<ShoppingCartIcon />}
           disabled={!selectedSize}
-          sx={{ mt: 2 }}
+          sx={{ mt: 2, width: '100%' }}
         >
           Adicionar ao Carrinho
         </Button>
