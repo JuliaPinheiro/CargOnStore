@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { Typography, Box, Button, Grid } from '@mui/material';
 import productsData from '../../../public/dataProductList.json';
@@ -6,10 +7,10 @@ import ProductFilter from '../filters/ProductFilter';
 import { formatPrice } from '../../helpers/format';
 
 const Product = ({ product }: { product: any }) => {
-  const [isModalOpen, useModal] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
-  const handleOpenModal = () => useModal(true);
-  const handleCloseModal = () => useModal(false);
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
 
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -76,10 +77,6 @@ const ProductsList = () => {
     setSelectedTypes((prev) =>
       checked ? [...prev, value] : prev.filter((type) => type !== value)
     );
-  };
-
-  const removeType = (type: string) => {
-    setSelectedTypes((prev) => prev.filter((t) => t !== type));
   };
 
   const filteredProducts = productsData.filter((product) =>

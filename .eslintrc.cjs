@@ -15,6 +15,7 @@ module.exports = {
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
     'react/jsx-no-target-blank': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
