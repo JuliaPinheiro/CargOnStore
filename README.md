@@ -1,6 +1,3 @@
-# Projeto de Teste para Vaga de Engenheiro de Software JR - CargOn
-
-Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Engenheiro de Software Jr na CargOn. O objetivo era criar um marketplace de roupas utilizando React.js.
 
 ## Funcionalidades Implementadas
 
